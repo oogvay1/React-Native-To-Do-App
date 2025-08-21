@@ -64,6 +64,6 @@ export default function Chat() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: 'red' },
+    container: { flex: 1, backgroundColor: 'black' },
     contentContainer: { padding: 36, alignItems: 'center' },
 });
