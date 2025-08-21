@@ -1,4 +1,3 @@
-// app/_layout.tsx
 import { ThemeProvider } from "@/theme/ThemeProvider";
 import { Stack } from "expo-router";
 import { SafeAreaProvider } from "react-native-safe-area-context";

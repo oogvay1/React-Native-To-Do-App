@@ -51,7 +51,7 @@ export default function TabLayout() {
             onLayout={(e) => setBarWidth(e.nativeEvent.layout.width)}
         >
             {/* Your background blur + noise */}
-            <BlurView intensity={29} tint="dark" style={StyleSheet.absoluteFill} />
+            <BlurView intensity={50} tint="dark" style={StyleSheet.absoluteFill} />
             <Image
                 source={require("../../assets/images/noise.png")}
                 style={styles.noise}
