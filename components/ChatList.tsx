@@ -1,15 +1,17 @@
-import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import { StyleSheet, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
-
 export default function ChatList() {
 
     return (
         <ScrollView
+            style={styles.container}
+            overScrollMode="always"
             showsVerticalScrollIndicator={false}
-            overScrollMode
         >
-            
+            <View>
+                
+            </View>
         </ScrollView>
     )
 }

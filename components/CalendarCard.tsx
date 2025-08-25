@@ -73,6 +73,16 @@ export default function CalendarCard() {
 
     const weekDays = ["M", "T", "W", "T", "F", "S", "S"];
 
+    const weekDays2 = [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+    ];
+
     function getCurrentWeek() {
         const today = new Date();
         const dayOfWeek = today.getDay();
@@ -125,10 +135,10 @@ export default function CalendarCard() {
     }
 
     function getWeekDatStyles(i) {
-        if (i == new Date().getDay()) {
-            return { color: "red" }
+        if (i == new Date().getDay() - 1) {
+            return { color: "#ffffffbe", fontWeight: "700" }
         } else {
-            return { color: "blue" }
+            return { color: "balck" }
         }
     }
 
@@ -210,6 +220,18 @@ export default function CalendarCard() {
                     </Animated.View>
 
                     <Animated.View style={[styles.calendarContainer, calendarAnim]}>
+                        <View>
+                            <View>
+                                <Text>{new Date().getDate()}</Text>
+                                <Text>{months[new Date().getMonth()]}</Text>
+                                <Text>{new Date().getFullYear()}</Text>
+                            </View>
+
+                            <View>
+                                <Text>{weekDays2[new Date().getDay() - 1]}</Text>
+                            </View>
+                        </View>
+
                         <View style={styles.weekRow}>
                             {["M", "T", "W", "T", "F", "S", "S"].map((d, i) => (
                                 <Text key={i} style={getWeekDatStyles(i)}>{d}</Text>
@@ -347,15 +369,15 @@ const styles = StyleSheet.create({
     },
     weekRow: {
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         marginBottom: 10,
-        gap: 42,
-        marginLeft: -2
+        gap: 40.9,
+        marginLeft: 32
     },
     daysContainer: {
         flexDirection: "row",
         flexWrap: "wrap",
-        marginLeft: 13.5,
+        marginLeft: 13.8,
         marginBottom: 100,
         justifyContent: "flex-start",
     },

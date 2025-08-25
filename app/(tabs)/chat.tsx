@@ -45,6 +45,7 @@ export default function Chat() {
             <BottomSheet
                 ref={bottomSheetRef}
                 index={0}
+                backgroundStyle={styles.sheetContainer}
                 snapPoints={snapPoints}
                 enableOverDrag={true}
                 enablePanDownToClose={false}
@@ -64,6 +65,17 @@ export default function Chat() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: 'black' },
-    contentContainer: { padding: 36, alignItems: 'center' },
+    container: {
+        flex: 1,
+        backgroundColor: 'black'
+    },
+    contentContainer: {
+        padding: 36,
+        alignItems: 'center'
+    },
+    sheetContainer: {
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
+        backgroundColor: "#f3f3f3ff"
+    }
 });
